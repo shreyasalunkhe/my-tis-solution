@@ -1,0 +1,23 @@
+<h2>Transactional Data</h2>
+<form (ngSubmit)="onSubmit()" #transactionForm = "ngForm">
+<div >
+    <label for="department">Department</label>
+    <select class="form-control" id="department"  [(ngModel)] = "model.department" name="department" required>
+      <option *ngFor="let dep of departments"
+      [value]="dep" >{{ dep }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="quarter">Quarter</label>
+    <select class="form-control" id="quarter"  [(ngModel)] = "model.quarter" name="quarter" required>
+      <option *ngFor="let quar of quarters"
+      [value]="quar" >{{ quar }}</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-success" [disabled]="!transactionForm.form.valid">Login</button>
+</form>
+
+<div [hidden]="!submitted">
+    <p>{{transactionCountTotal}}</p>
+    <p>{{orderVolumeCountTotal}}</p>
+</div>

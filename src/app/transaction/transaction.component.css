@@ -1,0 +1,22 @@
+/* Minimal Table CSS */
+
+table.minimal-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table.minimal-table th,
+table.minimal-table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+table.minimal-table th {
+    font-weight: bold;
+}
+
+table.minimal-table td[colspan="2"] {
+    text-align: center;
+}
+

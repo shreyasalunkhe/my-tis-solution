@@ -1,0 +1,15 @@
+<app-header></app-header>
+<form  (ngSubmit)="onSubmit()" #selectDep = "ngForm"> 
+    <div>
+      <label for="department">Departments:  </label>
+      <select class="form-control" id="department" [(ngModel)] = "model.department" name="department" required>
+        <option *ngFor = "let dep of departmentsList" [value]="dep">{{dep}}</option>
+      </select>
+    </div>
+    <button type="submit">Get Pie Chart</button>
+  </form>
+  <div>
+    <canvas id="pieChart" width="300" height="300"></canvas>
+  </div>
+  <app-footer></app-footer>
+  
